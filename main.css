@@ -40,6 +40,16 @@ footer.footer {
     margin-bottom: 0px;
 }
 
+.header a.button {
+    background: #fff;
+    color: #000;
+}
+
+header.header{
+    background: #000;
+    color: #fff;
+}
+
 
 
 @media (min-width: 40rem) {

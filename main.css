@@ -56,6 +56,8 @@ header.header{
     .header {
         padding-top: 7rem
     }
+    
+    
 
 }
 
@@ -177,6 +179,10 @@ header.header{
     .navigation .navigation-list {
         margin-right: 0
     }
+    
+    #grids .column {
+    max-width: 33%;
+}
 
 }
 

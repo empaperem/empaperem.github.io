@@ -28,7 +28,10 @@
     padding-top: 5rem
 }
 
-
+footer.footer {
+    padding: 40px 0;
+    margin-bottom: 0px;
+}
 
 
 

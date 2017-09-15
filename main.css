@@ -112,9 +112,10 @@ footer.footer {
 }
 
 .backgrounder2 {
-    background: var(--main-bg-color);
-    padding: 7rem 0rem;
+    background: url(empaperembg2.jpg);
+    padding: 23rem 0rem;
     color: #f4f5f6;
+    background-size: cover;
 }
 
 

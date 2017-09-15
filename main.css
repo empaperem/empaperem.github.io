@@ -326,16 +326,15 @@ header.header{
     border-radius: .4rem;
     color: #fff;
     display: block;
-    height: 2.2rem;
     text-align: center;
-    width: 5rem
+    padding: 1.1rem 2.6rem;
 }
 .share-dialog:hover {
     background-color: var(--main-text-color)
 }
 .share-dialog .share-icon {
     fill: #fff;
-    height: 1.5rem
+    height: 2rem;
 }
 @media (min-width: 40rem) {
     .only-mobile {

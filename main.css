@@ -11,7 +11,7 @@
 a.navigation-link {
     background: #1c94e0;
     color: #fff;
-    padding: 5px 12px !important;
+    padding: 5px 4px !important;
     font-size: 12px! important;
     border-radius: 4px;
     font-weight: bold;
@@ -196,7 +196,7 @@ header.header{
 .navigation .navigation-item {
     float: left;
     margin-bottom: 0;
-    margin-left: 2.5rem;
+    margin-left: 0.5rem;
     position: relative
 }
 .navigation .img {

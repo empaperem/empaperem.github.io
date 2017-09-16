@@ -17,6 +17,10 @@ a.navigation-link {
     font-weight: bold;
 }
 
+.whatsapp a.navigation-link {
+    background: #10b63a;
+}
+
 .wrapper {
     display: block;
     overflow: hidden;

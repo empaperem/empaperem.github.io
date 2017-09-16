@@ -156,7 +156,7 @@ header.header{
 
 .navigation {
     background: #fff;
-    border-bottom: 0px;
+    border-bottom: 0.1rem solid #f3f3f3;
     display: block;
     height: 5.2rem;
     left: 0;

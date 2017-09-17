@@ -26,6 +26,10 @@ a.navigation-link {
     background: #10b63a;
 }
 
+#cartells .example img {
+    border: 0.1rem solid #cccccc;
+}
+
 .wrapper {
     display: block;
     overflow: hidden;

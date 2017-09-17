@@ -17,6 +17,12 @@ a.navigation-link {
     font-weight: bold;
 }
 
+.videohome{    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;}
+
+
 #cartells header.header {
     background: #f4f5f6;
     color: #000;

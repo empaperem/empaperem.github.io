@@ -17,6 +17,11 @@ a.navigation-link {
     font-weight: bold;
 }
 
+#cartells header.header {
+    background: #f4f5f6;
+    color: #000;
+}
+
 .whatsapp a.navigation-link {
     background: #10b63a;
 }

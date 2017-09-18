@@ -52,6 +52,27 @@ thead th {
     background: #10b63a;
 }
 
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    margin-left: 0;
+}
+
+#taulas_filter label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+    text-align: left;
+}
+
+div#taulas_info {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
 table.taula {
     font-size: 12px;
 }

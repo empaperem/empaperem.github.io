@@ -29,6 +29,12 @@ a.navigation-link {
 
 
 
+#organitza h3 {
+    margin-top: 6rem;
+}
+
+
+
 #cartells header.header {
     background: #f4f5f6;
     color: #000;
@@ -99,6 +105,11 @@ header.header{
         padding-top: 7rem
     }
     
+    #organitza .column:first-of-type {
+    max-width: 50%;
+    margin-right: 7rem;
+}
+
     
 
 }

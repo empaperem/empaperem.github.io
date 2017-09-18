@@ -88,7 +88,7 @@
                 </section>
             </footer>
         </main>
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
 
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -97,18 +97,18 @@
   
 $(document).ready(function(){
 
-        $.getJSON("http://gsx2json.com/api?id=1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU&columns=false", function (data) {
-        // var html = '';
-        var fileres = data.rows;
-        // $.each(fileres, function (key, val) {
-        // html += "<tr><td>"+ val.municipi+"</td>"+"<td>"+ val.lloc+"</td>"+"<td>"+ val.data+"</td>"+"<td>"+ val.hora+"</td>"+"<td><a class='button button-small' href='"+ val.apunts+"'>Més info</a></td>";
+        // $.getJSON("http://gsx2json.com/api?id=1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU&columns=false", function (data) {
+        // // var html = '';
+        // var fileres = data.rows;
+        // // $.each(fileres, function (key, val) {
+        // // html += "<tr><td>"+ val.municipi+"</td>"+"<td>"+ val.lloc+"</td>"+"<td>"+ val.data+"</td>"+"<td>"+ val.hora+"</td>"+"<td><a class='button button-small' href='"+ val.apunts+"'>Més info</a></td>";
+        // // });
+        // // $( html ).insertAfter( "#headertaula" );
+
+
+
+
         // });
-        // $( html ).insertAfter( "#headertaula" );
-
-
-
-
-        });
 
 
 
@@ -123,9 +123,6 @@ $('#taulas').DataTable( {
             { "rows": "apunts" }
             ]
             } );
-
-
-
 
 
 });

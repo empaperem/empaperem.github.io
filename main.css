@@ -42,6 +42,15 @@ a.navigation-link {
     border: 0.1rem solid #cccccc;
 }
 
+
+.button.button-small {
+    font-size: 9px;
+    padding: 5px;
+    margin-bottom: 0px;
+    line-height: 12px;
+    height: auto;
+}
+
 .wrapper {
     display: block;
     overflow: hidden;

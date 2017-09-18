@@ -17,10 +17,16 @@ a.navigation-link {
     font-weight: bold;
 }
 
-.videohome{    text-align: center;
-    width: 70%;
+
+
+.videohome {
+    text-align: center;
+    width: 120%;
     margin: 0 auto;
-    margin-top: 60px;}
+    margin-top: 60px;
+    margin-left: -11%;
+}
+
 
 
 #cartells header.header {
@@ -198,6 +204,11 @@ header.header{
     .navigation .navigation-list {
         margin-right: 0
     }
+    
+    .videohome{    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;}
     
     #grids .column {
     max-width: 33%;

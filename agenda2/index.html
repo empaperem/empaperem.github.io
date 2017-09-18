@@ -107,8 +107,14 @@ $(document).ready(function(){
 
 
 $('#taulas').DataTable( {
-        "ajax": fileres
-    } );
+"ajax": fileres,
+        "columns": [
+            { "data": "municipi" },
+            { "data": "lloc" },
+            { "data": "data" },
+            { "data": "hora" },
+            { "data": "apunts" }        ]
+            } );
 
 
         });

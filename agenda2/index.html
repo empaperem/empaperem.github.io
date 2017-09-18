@@ -60,23 +60,23 @@
  <p style="margin-bottom:60px">Aquí teniu una agenda centralitzada i actualitzada de totes les accions d'<a href="https://twitter.com/search?src=typd&q=%23empaperem" style="color: #1c94e0;font-weight: 900;">#empaperem</a> arreu del territori. Envieu-nos un DM al compte de Twitter <a href="https://twitter.com/empaperem" style="color: #1c94e0;-weight: 900;">@empaperem</a> si voleu informar-nos d'una crida i que quedi recollida en aquesta agenda</p>                
                 
                 
-<table id="taulas" class="display" cellspacing="0" width="100%">
+<table id="taulas" class="taula">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
+                <th>Municipi</th>
+                <th>Lloc</th>
+                <th>Hora</th>
+                <th>Data</th>
+                <th></th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
+                  <th>Municipi</th>
+                <th>Lloc</th>
+                <th>Hora</th>
+                <th>Data</th>
+                <th></th>
             </tr>
         </tfoot>
     </table>
@@ -99,7 +99,8 @@ $(document).ready(function() {
 $('#taulas').dataTable( {
 "ajax": {
 "url": "http://gsx2json.com/api?id=1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU&columns=false",
-"dataSrc": 'rows'
+"dataSrc": 'rows',
+
 },
 "columns": [
             { "data": "municipi" },
@@ -107,7 +108,14 @@ $('#taulas').dataTable( {
             { "data": "hora" },
             { "data": "data" },
             { "data": "apunts" },
-        ]
+        ],
+          "lengthChange": false,
+          "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/Catalan.json"
+            },
+              "pageLength": 100
+
+
 } );
 } );
 

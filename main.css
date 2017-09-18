@@ -17,7 +17,9 @@ a.navigation-link {
     font-weight: bold;
 }
 
-
+div#taulas_filter {
+    float: left;
+}
 
 .videohome {
     text-align: center;
@@ -26,6 +28,12 @@ a.navigation-link {
     margin-top: 60px;
     margin-left: -11%;
 }
+
+
+thead th {
+    border-bottom: 0.1px solid #e5e5e5 !important;
+}
+
 
 
 
@@ -49,11 +57,11 @@ table.taula {
 }
 
 #cartells .example img {
-    border: 0.1rem solid #cccccc;
+    border: 0.1px solid #cccccc;
 }
 
 .taula td, .taula th {
-    border-bottom: .1rem solid #e1e1e1;
+    border-bottom: 0.1px solid #e1e1e1 !important;
     padding: 0.9rem 0.8rem;
     text-align: left;
 }

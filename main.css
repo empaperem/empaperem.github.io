@@ -38,6 +38,10 @@ a.navigation-link {
     background: #10b63a;
 }
 
+table.taula {
+    font-size: 12px;
+}
+
 #cartells .example img {
     border: 0.1rem solid #cccccc;
 }

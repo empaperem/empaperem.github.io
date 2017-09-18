@@ -46,7 +46,11 @@ table.taula {
     border: 0.1rem solid #cccccc;
 }
 
-
+.taula td, .taula th {
+    border-bottom: .1rem solid #e1e1e1;
+    padding: 0.9rem 0.8rem;
+    text-align: left;
+}
 .button.button-small {
     font-size: 9px;
     padding: 5px;

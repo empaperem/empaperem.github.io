@@ -205,10 +205,7 @@ header.header{
         margin-right: 0
     }
     
-    .videohome{    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 60px;}
+
     
     #grids .column {
     max-width: 33%;
@@ -376,6 +373,12 @@ header.header{
     .only-mobile {
         display: none
     }
+    
+        .videohome{    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;}
+    
 }
 .prettyprint.code {
     border: 0;

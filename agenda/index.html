@@ -46,7 +46,6 @@
                     </ul>
                 </section>
             </nav>
-
             <header class="header" id="home">
                 <section class="container">
                     <h1 class="title">Agenda d'empaperades</h1>
@@ -56,32 +55,31 @@
             
             <section class="container bg" id="utilities">
                 
-              
-                
- <p style="margin-bottom:60px">Aquí teniu una agenda centralitzada i actualitzada de totes les accions d'<a href="https://twitter.com/search?src=typd&q=%23empaperem" style="color: #1c94e0;font-weight: 900;">#empaperem</a> arreu del territori. Envieu-nos un DM al compte de Twitter <a href="https://twitter.com/empaperem" style="color: #1c94e0;-weight: 900;">@empaperem</a> si voleu informar-nos d'una crida i que quedi recollida en aquesta agenda</p>                
                 
                 
-<table id="taulas" class="taula">
-        <thead>
-            <tr>
-                <th>Municipi</th>
-                <th>Lloc</th>
-                <th>Data</th>
-                <th>Hora</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tfoot style="display: none">
-            <tr>
-                  <th>Municipi</th>
-                <th>Lloc</th>
-                <th>Hora</th>
-                <th>Data</th>
-                <th></th>
-            </tr>
-        </tfoot>
-    </table>
-
+                <p style="margin-bottom:60px">Aquí teniu una agenda centralitzada i actualitzada de totes les accions d'<a href="https://twitter.com/search?src=typd&q=%23empaperem" style="color: #1c94e0;font-weight: 900;">#empaperem</a> arreu del territori. Envieu-nos un DM al compte de Twitter <a href="https://twitter.com/empaperem" style="color: #1c94e0;-weight: 900;">@empaperem</a> si voleu informar-nos d'una crida i que quedi recollida en aquesta agenda</p>
+                
+                
+                <table id="taulas" class="taula">
+                    <thead>
+                        <tr>
+                            <th>Municipi</th>
+                            <th>Lloc</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tfoot style="display: none">
+                    <tr>
+                        <th>Municipi</th>
+                        <th>Lloc</th>
+                        <th>Hora</th>
+                        <th>Data</th>
+                        <th></th>
+                    </tr>
+                    </tfoot>
+                </table>
             </section>
             <footer class="footer">
                 <section class="container">
@@ -91,97 +89,53 @@
         </main>
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
         <script>
-
-
-
-$(document).ready(function() {
-$('#taulas').dataTable( {
-"ajax": {
-"url": "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json",
-"dataSrc": 'feed.entry',
-
-},
-"columns": [
-            { "data": "gsx$municipi.$t" },
-            { "data": "gsx$lloc.$t" },
-            { "data": null, "render": {
-      "_": "gsx$dia.$t",
-      "filter": "gsx$data.$t",
-      "display": "gsx$data.$t"
-    }},
-
-
-
-
-
-
-
-
-
-
-
-
-
-            { "data": "gsx$hora.$t" },
-            { "data": "gsx$apunts.$t",
+        $(document).ready(function() {
+        $('#taulas').dataTable( {
+        "ajax": {
+        "url": "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json",
+        "dataSrc": 'feed.entry',
+        },
+        "columns": [
+        { "data": "gsx$municipi.$t" },
+        { "data": "gsx$lloc.$t" },
+        { "data": null, "render": {
+        "_": "gsx$dia.$t",
+        "filter": "gsx$data.$t",
+        "display": "gsx$data.$t"
+        }},
+        { "data": "gsx$hora.$t" },
+        { "data": "gsx$apunts.$t",
         "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-            $(nTd).html("<a class='button button-small' href='"+oData.apunts+"'>+info</a>");
+        $(nTd).html("<a class='button button-small' href='"+oData.apunts+"'>+info</a>");
         }
-    },
-     ],
-
-columnDefs: [ { orderable: false, targets: [1,3,4] }, { searchable: false, targets: [1,2,3,4] }],
-
-
-          "lengthChange": false,
-          "language": {
-sProcessing: "Processant...",
-sLengthMenu: "Mostra _MENU_ empaperades",
-sZeroRecords: "No s'han trobat empaperades.",
-sInfo: "Mostrant de _START_ a _END_ de _TOTAL_ empaperades",
-sInfoEmpty: "Mostrant de 0 a 0 de 0 empaperades",
-sInfoFiltered: "(filtrat de _MAX_ total empaperades)",
-sInfoPostFix: "",
- sSearch: "",
-sLoadingRecords: "Carregant...",
-sUrl: "",
- searchPlaceholder: "Cerca per municipi",
-oPaginate: {
-sFirst: "Primer",
-sPrevious: "Anterior",
-sNext: "SegÃ¼ent",
-sLast: "Ãšltim"
-}
-},
-              "pageLength": 100,
-                  "paging": false
-
-
-
-} );
-
-
-
-
-
-
-
-
-$.getJSON("http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json", function(data) {
-  //first row "title" column
-  console.log(data.feed.entry[0]['gsx$municipi']['$t']);
-});
-
-
-
-} );
-
-
-
-
-
+        },
+        ],
+        columnDefs: [ { orderable: false, targets: [1,3,4] }, { searchable: false, targets: [1,2,3,4] }],
+        "lengthChange": false,
+        "language": {
+        sProcessing: "Processant...",
+        sLengthMenu: "Mostra _MENU_ empaperades",
+        sZeroRecords: "No s'han trobat empaperades.",
+        sInfo: "Mostrant de _START_ a _END_ de _TOTAL_ empaperades",
+        sInfoEmpty: "Mostrant de 0 a 0 de 0 empaperades",
+        sInfoFiltered: "(filtrat de _MAX_ total empaperades)",
+        sInfoPostFix: "",
+        sSearch: "",
+        sLoadingRecords: "Carregant...",
+        sUrl: "",
+        searchPlaceholder: "Cerca per municipi",
+        oPaginate: {
+        sFirst: "Primer",
+        sPrevious: "Anterior",
+        sNext: "SegÃ¼ent",
+        sLast: "Ãšltim"
+        }
+        },
+        "pageLength": 100,
+        "paging": false
+        } );
+        } );
         </script>
     </body>
 </html>

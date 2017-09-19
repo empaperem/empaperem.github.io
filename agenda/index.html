@@ -113,10 +113,10 @@
         "display": "gsx$data.$t"
         }},
         { "data": "gsx$hora.$t" },
-        { "data": "gsx$apunts.$t",
+        { "data": "gsx$apunts.$t", className: "only-desktop",
         "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
-        $(nTd).html("<a class='button button-small' href='"+oData.apunts+"'>+info</a>");
-        }, className: "only-desktop"
+        $(nTd).html("<a class='button button-small' href='"+sData+"'>+info</a>");
+        }
         },
                 { "data": "gsx$missatge.$t", className: "only-mobile" },
 

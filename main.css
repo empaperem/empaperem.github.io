@@ -23,6 +23,10 @@ div#taulas_filter {
     margin-left: -11%;
 }
 
+li.navigation-item:last-of-type {
+    margin-left: 2rem;
+}
+
 
 thead th {
     border-bottom: 0.1px solid #e5e5e5 !important;

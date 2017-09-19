@@ -55,7 +55,8 @@
                 <section class="container">
                     <h1 class="title" style="font-family:'Montserrat'; font-weight:900; text-transform:uppercase">#Empaperem</h1>
                     <p class="description">Organitza't al teu municipi i surt a empaperar els carrers de llibertat!</p>
-                    <a class="button" href="/agenda" title="Empaperem">Consulta l'agenda d'empaperades</a> </section>
+                    <a class="button" href="/agenda" title="Empaperem">Consulta l'agenda d'empaperades</a>
+                        </section>
                 </header>
                 <section class="container" id="why">
                     <h3 class="title">No calen impremtes!</h3>
@@ -100,6 +101,10 @@
         </li>
     </ul>
 </div>
+
+
+
+
 </section>
 <div class="backgrounder2">
 <section class="container backg"> </section>
@@ -179,6 +184,12 @@
                 </section>
             </footer>
         </main>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script>
+        $.getJSON( "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json", function( json ) {
+$( "#comptador" ).html(json.feed.openSearch$totalResults.$t);
+});
+</script>
     </body>
 </html>

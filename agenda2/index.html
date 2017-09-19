@@ -105,7 +105,24 @@ $('#taulas').dataTable( {
 "columns": [
             { "data": "municipi" },
             { "data": "lloc" },
-            { "data": "data" },
+            { "data": null, "render": {
+      "_": "dia",
+      "filter": "data",
+      "display": "data"
+    }},
+
+
+
+
+
+
+
+
+
+
+
+
+
             { "data": "hora" },
             { "data": "apunts",
         "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
@@ -113,18 +130,23 @@ $('#taulas').dataTable( {
         }
     },
      ],
+
+columnDefs: [ { orderable: false, targets: [1,3,4] }, { searchable: false, targets: [1,2,3,4] }],
+
+
           "lengthChange": false,
           "language": {
 sProcessing: "Processant...",
-sLengthMenu: "Mostra _MENU_ registres",
-sZeroRecords: "No s'han trobat registres.",
-sInfo: "Mostrant de _START_ a _END_ de _TOTAL_ registres",
-sInfoEmpty: "Mostrant de 0 a 0 de 0 registres",
-sInfoFiltered: "(filtrat de _MAX_ total registres)",
+sLengthMenu: "Mostra _MENU_ empaperades",
+sZeroRecords: "No s'han trobat empaperades.",
+sInfo: "Mostrant de _START_ a _END_ de _TOTAL_ empaperades",
+sInfoEmpty: "Mostrant de 0 a 0 de 0 empaperades",
+sInfoFiltered: "(filtrat de _MAX_ total empaperades)",
 sInfoPostFix: "",
-sSearch: "Filtrar",
+ sSearch: "",
 sLoadingRecords: "Carregant...",
 sUrl: "",
+ searchPlaceholder: "Cerca per municipi",
 oPaginate: {
 sFirst: "Primer",
 sPrevious: "Anterior",

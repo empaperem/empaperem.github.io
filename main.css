@@ -150,7 +150,7 @@ a.button.whatsapp.button-small.only-mobile {
     top: 82px;
     border-radius: 10px;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 20px;
     z-index: 999999;
 }
 

@@ -137,7 +137,7 @@ header.header{
         padding-top: 7rem
     }
 
-    .only-desktop{display: block !important;}
+    .only-desktop{display: table-cell !important;}
     
     #organitza .column:first-of-type {
     max-width: 50%;

@@ -35,6 +35,7 @@
     </head>
     <body id="cartells">
         <main class="wrapper">
+            
             <nav class="navigation">
                 <section class="container">
                     <a class="navigation-title" href="/">
@@ -45,6 +46,7 @@
                     </ul>
                 </section>
             </nav>
+
             <header class="header" id="home">
                 <section class="container">
                     <h1 class="title">Agenda d'empaperades</h1>
@@ -97,17 +99,17 @@
 $(document).ready(function() {
 $('#taulas').dataTable( {
 "ajax": {
-"url": "http://gsx2json.com/api?id=1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU&columns=false",
-"dataSrc": 'rows',
+"url": "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json",
+"dataSrc": 'feed.entry',
 
 },
 "columns": [
-            { "data": "municipi" },
-            { "data": "lloc" },
+            { "data": "gsx$municipi.$t" },
+            { "data": "gsx$lloc.$t" },
             { "data": null, "render": {
-      "_": "dia",
-      "filter": "data",
-      "display": "data"
+      "_": "gsx$dia.$t",
+      "filter": "gsx$data.$t",
+      "display": "gsx$data.$t"
     }},
 
 
@@ -122,8 +124,8 @@ $('#taulas').dataTable( {
 
 
 
-            { "data": "hora" },
-            { "data": "apunts",
+            { "data": "gsx$hora.$t" },
+            { "data": "gsx$apunts.$t",
         "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
             $(nTd).html("<a class='button button-small' href='"+oData.apunts+"'>+info</a>");
         }
@@ -159,6 +161,21 @@ sLast: "Ãšltim"
 
 
 } );
+
+
+
+
+
+
+
+
+$.getJSON("http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json", function(data) {
+  //first row "title" column
+  console.log(data.feed.entry[0]['gsx$municipi']['$t']);
+});
+
+
+
 } );
 
 

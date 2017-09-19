@@ -57,9 +57,9 @@ table.dataTable tbody th, table.dataTable tbody td {
 }
 
 .dataTables_wrapper .dataTables_filter input {
-    margin-left: 0;
+    margin-left: 0 !important;
+    margin-top: 7px;
 }
-
 #taulas_filter label {
     display: block;
     font-size: 1.1rem;

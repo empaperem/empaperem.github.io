@@ -65,12 +65,12 @@
             <tr>
                 <th>Municipi</th>
                 <th>Lloc</th>
-                <th>Hora</th>
                 <th>Data</th>
+                <th>Hora</th>
                 <th></th>
             </tr>
         </thead>
-        <tfoot>
+        <tfoot style="display: none">
             <tr>
                   <th>Municipi</th>
                 <th>Lloc</th>
@@ -105,14 +105,33 @@ $('#taulas').dataTable( {
 "columns": [
             { "data": "municipi" },
             { "data": "lloc" },
-            { "data": "hora" },
             { "data": "data" },
-            { "data": "apunts" },
-        ],
+            { "data": "hora" },
+            { "data": "apunts",
+        "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+            $(nTd).html("<a class='button button-small' href='"+oData.apunts+"'>+info</a>");
+        }
+    },
+     ],
           "lengthChange": false,
           "language": {
-                "url": "https://cdn.datatables.net/plug-ins/1.10.16/i18n/Catalan.json"
-            },
+sProcessing: "Processant...",
+sLengthMenu: "Mostra _MENU_ registres",
+sZeroRecords: "No s'han trobat registres.",
+sInfo: "Mostrant de _START_ a _END_ de _TOTAL_ registres",
+sInfoEmpty: "Mostrant de 0 a 0 de 0 registres",
+sInfoFiltered: "(filtrat de _MAX_ total registres)",
+sInfoPostFix: "",
+sSearch: "Filtrar",
+sLoadingRecords: "Carregant...",
+sUrl: "",
+oPaginate: {
+sFirst: "Primer",
+sPrevious: "Anterior",
+sNext: "SegÃ¼ent",
+sLast: "Ãšltim"
+}
+},
               "pageLength": 100,
                   "paging": false
 

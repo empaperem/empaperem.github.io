@@ -19,6 +19,7 @@ a.navigation-link {
 
 div#taulas_filter {
     float: left;
+    width: 100%;
 }
 
 .videohome {

@@ -131,6 +131,26 @@ a.button.whatsapp.button-small.only-mobile {
     color: #00b419;
 }
 
+
+.modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    height: 100%;
+}
+
+
+
+.modal-body {
+    background: #fff;
+    margin: 6%;
+    padding: 7%;
+    top: 80px;
+    position: relative;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
 header.header{
     background: #000;
     color: #fff;

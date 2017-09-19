@@ -124,10 +124,11 @@ footer.footer {
 }
 
 a.button.whatsapp.button-small.only-mobile {
-    background: #00b419;
-    border: 0px;
-    padding: 8px 4px;
+    background: #fff;
+    border: 1px solid #00b419;
+    padding: 3px 4px;
     font-size: 8px;
+    color: #00b419;
 }
 
 header.header{

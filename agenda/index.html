@@ -67,7 +67,8 @@
                             <th>Lloc</th>
                             <th>Data</th>
                             <th>Hora</th>
-                            <th></th>
+                        <th> </th>
+                        <th> </th>                     
                         </tr>
                     </thead>
                     <tfoot style="display: none">
@@ -76,7 +77,8 @@
                         <th>Lloc</th>
                         <th>Hora</th>
                         <th>Data</th>
-                        <th></th>
+                        <th> </th>
+                        <th> </th>
                     </tr>
                     </tfoot>
                 </table>
@@ -108,10 +110,12 @@
         { "data": "gsx$apunts.$t",
         "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
         $(nTd).html("<a class='button button-small' href='"+oData.apunts+"'>+info</a>");
-        }
+        }, className: "only-desktop"
         },
+                { "data": "gsx$missatge.$t", className: "only-mobile" },
+
         ],
-        columnDefs: [ { orderable: false, targets: [1,3,4] }, { searchable: false, targets: [1,2,3,4] }],
+        columnDefs: [ { orderable: false, targets: [1,3,4,5] }, { searchable: false, targets: [1,2,3,4,5] }],
         "lengthChange": false,
         "language": {
         sProcessing: "Processant...",

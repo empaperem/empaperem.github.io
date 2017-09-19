@@ -143,16 +143,17 @@ a.button.whatsapp.button-small.only-mobile {
     padding: 60px 20px;
 }
 
-
 .modal-body {
     background: #fff;
     padding: 20px;
     top: 82px;
     border-radius: 5px;
     max-width: 500px;
-    margin: 0 20px;
+    margin: 0 auto;
     z-index: 999999;
 }
+
+
 
 header.header{
     background: #000;

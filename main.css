@@ -129,12 +129,15 @@ header.header{
     color: #fff;
 }
 
+    .only-desktop{display: none;}
 
 
 @media (min-width: 40rem) {
     .header {
         padding-top: 7rem
     }
+
+    .only-desktop{display: block;}
     
     #organitza .column:first-of-type {
     max-width: 50%;

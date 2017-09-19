@@ -54,9 +54,10 @@ table.dataTable tbody th, table.dataTable tbody td {
 
 .dataTables_wrapper .dataTables_filter input {
     margin-left: 0 !important;
-    margin-top: 7px;
-    font-size: 14px;
+    margin-top: 1rem;
+    font-size: 1.4rem;
     font-weight: 100;
+    margin-bottom: 3rem;
 }
 
 

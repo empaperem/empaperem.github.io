@@ -84,13 +84,13 @@ table.taula {
 
 
 
-.backgrounder2.massiva {
-    background: url(http://empaperem.cat/empaperadamassiva.jpg);
-    background-position: center;
-    background-size: auto 255px;
-    background-repeat: no-repeat;
-    height: 240px;
-    padding: 0;
+.massiva {
+    background: url(http://empaperem.cat/empaperadamassiva.jpg) !important;
+    background-position: center !important;
+    background-size: auto 255px !important;
+    background-repeat: no-repeat !important;
+    height: 240px !important;
+    padding: 0 !important;
 }
 
 
@@ -197,9 +197,9 @@ table.taula {
 
 
 .backgrounder2.massiva {
-    background-position: center center;
-    background-size: contain;
-    height: 332px;
+    background-position: center center !important;
+    background-size: contain !important;
+    height: 332px !important:;
 }
 
     

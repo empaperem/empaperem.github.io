@@ -82,6 +82,17 @@ table.taula {
     border: 0.2rem solid #efefef;
 }
 
+
+
+.massiva {
+    background: url(http://empaperem.cat/empaperadamassiva.jpg);
+    background-position: center;
+    background-size: auto 255px;
+    background-repeat: no-repeat;
+    height: 240px;
+    padding: 0;
+}
+
 .taula td, .taula th {
     border-bottom: 0.1px solid #e1e1e1 !important;
     padding: 0.9rem 0.8rem;

@@ -205,7 +205,7 @@ $("#tancar, #enviar").click(function(){
 });
 
 
-$.getJSON( "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json", function( json ) {
+$.getJSON( "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json&callback=?", function( json ) {
 $( "#comptador" ).html(json.feed.openSearch$totalResults.$t);
 $( "#compta" ).html(json.feed.openSearch$totalResults.$t);
 });

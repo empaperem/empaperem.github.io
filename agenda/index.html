@@ -20,7 +20,7 @@
         <meta name="twitter:description" content="Organitza't i surt a empaperar els carrers del municipi de llibertat">
         <meta name="twitter:image" content="http://empaperem.cat/gentempaperant.jpg">
         <link rel="icon" href="http://empaperem.cat/printer.png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
         <link rel="stylesheet" href="http://empaperem.cat/main.css">
@@ -56,15 +56,13 @@
 
 
             <section class="container bg" id="utilities">
-                
-                <h3>L'agenda tornarà a estar disponible aviat amb moltes novetats!</h3>
-                <p>Mentrestant, continua empaperant el teu barri o municipi</p>
-                
-            </section>
 
+            <h1>Ben aviat tindràs noves notícies nostres</h1>
+
+</section>
 
             
-            <section class="container bg" id="utilities" style="display:none">
+            <section class="container bg" id="utilities" style="display: none">
                 
                 <h3><code id="compta"></code> empaperades actives!</h3>
                 
@@ -129,7 +127,10 @@
 
 <form action="https://formspree.io/xjyvdvzm" method="POST">
 <input type="hidden" name="_subject" value="Nou formulari d'Empaperem" />
-<input type="hidden" name="_format" value="plain" />
+<input type="hidden" name="redirect_url " value="http://marca.com" />
+
+
+
 <input type="hidden" name="_next" value="http://empaperem.cat/gracies" />
     <input type="text" name="_gotcha" style="display: none">
     <input type="text" placeholder="Municipi" name="municipi" required>
@@ -138,7 +139,7 @@
 
     <input type="text" placeholder="Link" name="link" required>
     <textarea placeholder="Comentaris" name="missatge"></textarea>
-    <button type="submit" style="width: 100%" id="enviar">Enviar!</button>
+    <button type="submit" style="width: 100%" id="enviar">Enviar informació!</button>
 </form>
 </div>
 </div>
@@ -149,10 +150,10 @@
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
         <script>
-        $(document).ready(function() {
+        $(document).ready(function() {  
         $('#taulas').dataTable( {
         "ajax": {
-        "url": "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json&callback=?",
+        "url": "http://cors.io/?https://spreadsheets.google.com/feeds/list/1OhX2nwS2H25rTkSkPJV60RhnoREhBxEW_mAA00CcoNI/1/public/values?alt=json&callback=?",
         "dataSrc": 'feed.entry',
         },
         "columns": [
@@ -172,7 +173,7 @@
                 { "data": "gsx$missatge.$t", className: "only-mobile" },
 
         ],
-        columnDefs: [ { orderable: false, targets: [1,3,4,5] }, { searchable: false, targets: [1,2,3,4,5] }],
+        columnDefs: [ { orderable: false, targets: [0,3] }, { searchable: false, targets: [3] }],
         "lengthChange": false,
         "language": {
         sProcessing: "Processant...",
@@ -193,7 +194,7 @@
         sLast: "Ãšltim"
         }
         },
-        "pageLength": 100,
+        "pageLength": 500,
         "paging": false,
          "order": [[ 2, 'asc' ], [ 3, 'asc' ]]
         } );
@@ -218,3 +219,13 @@ $( "#compta" ).html(json.feed.openSearch$totalResults.$t);
         </script>
     </body>
 </html>
+
+2PACX-1vSsjjFpcyLD3kjpGmM8t45TCTJXTk000e8Gn035BLmJ5YW2pWFFr94KoFiLjzj1rsr9W4mR1KvyyKGB
+
+https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json&callback=?
+
+
+https://spreadsheets.google.com/feeds/list/1OhX2nwS2H25rTkSkPJV60RhnoREhBxEW_mAA00CcoNI/od6/public/values?alt=json
+
+
+http://cors.io/?https://spreadsheets.google.com/feeds/list/2PACX-1vSsjjFpcyLD3kjpGmM8t45TCTJXTk000e8Gn035BLmJ5YW2pWFFr94KoFiLjzj1rsr9W4mR1KvyyKGB/3/public/values?alt=json&callback=?
